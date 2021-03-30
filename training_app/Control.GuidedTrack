@@ -1,0 +1,97 @@
+*page
+	*header: AU Calibration Training Study Instructions
+	
+	You have been assigned to the control group. This means that you will not complete any calibration training exercises. Please select the button below to proceed to answer the basic information questions and three simple practice questions. You will then enter your email. This will complete your preliminary requirements. Once this is complete you will receive a weekly email to enter your football forecasts for each week. Thank you for your participation! 
+	
+	If you have any questions please email rossg@auburn.edu.
+	
+	
+
+*page
+	*header: Please answer the following basic information questions:
+	
+	*question: What is your gender?
+		Female
+		Male
+		Other
+		
+	*question: What is your major?
+	
+	*question: What is your class standing?
+		Freshman
+		Sophomore
+		Junior
+		Senior
+		
+	*question: Please select if you:
+		*type: checkbox
+		Have ever participated in fantasy sports?
+		Are currently participating in fantasy sports?
+		Betted on sporting events?
+		Currently bet on sporting events?
+
+	*question: How many AU games did you attend last year?
+		*type: number
+	
+	*question: How many SEC games do you watch (at least five minutes of) on average each week?
+	
+	*question: How many out of conference games do you watch (at least five minutes of) on average each week?
+	
+	*question: How many NFL games do you watch (at least five minutes of) on average each week?
+	
+	*question: How often do you watch sports news?
+		Never
+		Once or twice a month
+		Once a week
+		2-3 times a week
+		Most days
+		
+	*question: Which of the following college sports do you follow during the season?
+		*type: checkbox
+		Baseball
+		Basketball
+		Football
+		Golf
+		Hockey
+		Tennis
+		
+	*question: Which of the following professional sports do you follow during the season?
+		*type: checkbox
+		Baseball
+		Basketball
+		Football
+		Golf
+		Hockey
+		Tennis
+		
+	*question: How well would you rate your expertise related to college football?
+		1
+		2
+		3
+		4
+		5
+		6
+		7
+		8
+		9
+		10
+
+
+
+*page
+	*header: Please answer the following three quick practice questions:
+	
+	*question: 1.	A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? 
+	
+	*question: 2.	If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?
+	
+	*question: 3.	In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?
+
+
+
+*page
+	*header: Please Enter Your Email Address to Finish:
+
+	*question: Please enter your email address to use to mail you the weekly forecasts:
+	
+	If you have any questions please email rossg@auburn.edu.

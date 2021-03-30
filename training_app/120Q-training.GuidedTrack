@@ -1,0 +1,183 @@
+>>log_table = {"50%" -> "-0.301", "55%" -> "-0.260", "60%" -> "-0.222", "65%" -> "-0.187", "70%" -> "-0.155", "75%" -> "-0.125", "80%" -> "-0.0969", "85%" -> "-0.0706", "90%" -> "-0.0458", "95%" -> "-0.0223", "97%" -> "-0.0132", "99%" -> "-0.00436"}
+>>log_table2 = {"0.01" -> "-2.0", "0.03" -> "-1.52", "0.05" -> "-0.130", "0.1" -> "-1.0", "0.15" -> "-0.824", "0.2" -> "-0.699", "0.25" -> "-0.602", "0.3" -> "-0.523", "0.35" -> "-0.456", "0.4" -> "-0.398", "0.45" -> "-0.347", "0.5" -> "-0.301", "0.55" -> "-0.260", "0.6" -> "-0.222", "0.65" -> "-0.187", "0.7" -> "-0.155", "0.75" -> "-0.125", "0.8" -> "-0.0969", "0.85" -> "-0.0706", "0.9" -> "-0.0458", "0.95" -> "-0.0223", "0.97" -> "-0.0132", "0.99" -> "-0.00436"}
+>>prob_table = {"50%" -> "0.5", "55%" -> "0.55", "60%" -> "0.6", "65%" -> "0.65", "70%" -> "0.7", "75%" -> "0.75", "80%" -> "0.8", "85%" -> "0.85", "90%" -> "0.9", "95%" -> "0.95", "97%" -> "0.97", "99%" -> "0.99"}
+>>prob_table2 = {"50%" -> "0.5", "55%" -> "0.45", "60%" -> "0.4", "65%" -> "0.35", "70%" -> "0.3", "75%" -> "0.25", "80%" -> "0.2", "85%" -> "0.15", "90%" -> "0.1", "95%" -> "0.05", "97%" -> "0.03", "99%" -> "0.01"}
+
+>>cities_a = {"0" -> "Auburn", "1" -> "Atlanta", "2" -> "Memphis", "3" -> "Miami", "4" -> "Tuscaloosa", "5" -> "Lexington", "6" -> "Jefferson City", "7" -> "Orlando", "8" -> "Augusta", "9" -> "Columbia", "10" -> "Memphis ", "11" -> "Knoxville", "12" -> "Augusta", "13" -> "Knoxville", "14" -> "Memphis", "15" -> "Biloxi", "16" -> "Huntsville", "17" -> "Macon", "18" -> "College Station", "19" -> "Dallas", "20" -> "Hattiesburg", "21" -> "Columbia", "22" -> "Hattiesburg", "23" -> "Nashville", "24" -> "Tallahassee", "25" -> "Columbus", "26" -> "Miami", "27" -> "St Louis", "28" -> "Oxford", "29" -> "Dallas ", "30" -> "Kansas City", "31" -> "Jackson", "32" -> "Columbus", "33" -> "Savannah", "34" -> "Louisville", "35" -> "Charleston", "36" -> "Hattiesburg", "37" -> "Miami", "38" -> "San Antonio", "39" -> "Jacksonville", "40" -> "Dallas ", "41" -> "Knoxville ", "42" -> "Tuscaloosa", "43" -> "Austin", "44" -> "Athens ", "45" -> "Dallas", "46" -> "Little Rock", "47" -> "Tallahassee ", "48" -> "Atlanta", "49" -> "Baton Rouge", "50" -> "Oxford", "51" -> "Tuscaloosa ", "52" -> "Biloxi", "53" -> "New Orleans ", "54" -> "Springfield ", "55" -> "Jefferson City ", "56" -> "Columbus", "57" -> "Columbia", "58" -> "Mobile", "59" -> "Jacksonville", "60" -> "Memphis", "61" -> "Miami", "62" -> "Houston", "63" -> "Kansas City", "64" -> "Lexington", "65" -> "Augusta", "66" -> "College Station", "67" -> "St Louis", "68" -> "Fayetteville", "69" -> "Montgomery ", "70" -> "Gainesville ", "71" -> "Auburn", "72" -> "Houston", "73" -> "Atlanta", "74" -> "Knoxville", "75" -> "Shreveport", "76" -> "Fayetteville ", "77" -> "Macon", "78" -> "Columbia", "79" -> "College Station ", "80" -> "Chattanooga", "81" -> "Orlando", "82" -> "Atlanta", "83" -> "Jacksonville", "84" -> "Auburn ", "85" -> "Louisville ", "86" -> "Kansas City", "87" -> "Jefferson City", "88" -> "Gainesville ", "89" -> "Tampa", "90" -> "Jacksonville", "91" -> "Kansas City", "92" -> "Starkville", "93" -> "Miami", "94" -> "Orlando", "95" -> "Columbus", "96" -> "Springfield", "97" -> "Waco", "98" -> "Gainesville ", "99" -> "Columbia", "100" -> "Augusta", "101" -> "Knoxville", "102" -> "Columbia", "103" -> "Nashville", "104" -> "Tuscaloosa", "105" -> "Jackson", "106" -> "Austin", "107" -> "New Orleans", "108" -> "Baton Rouge", "109" -> "Montgomery ", "110" -> "Little Rock", "111" -> "El Paso", "112" -> "Birmingham", "113" -> "Hattiesburg", "114" -> "Kansas City", "115" -> "Waco", "116" -> "San Antonio", "117" -> "St Louis", "118" -> "El Paso", "119" -> "Charleston"}
+
+>>cities_b = {"0" -> "Athens", "1" -> "Birmingham", "2" -> "Baton Rouge", "3" -> "Tallahassee", "4" -> "Athens", "5" -> "Gainesville", "6" -> "Charleston", "7" -> "Savannah", "8" -> "Tampa", "9" -> "Dallas", "10" -> "New Orleans", "11" -> "New Orleans", "12" -> "Shreveport", "13" -> "Miami", "14" -> "Tuscaloosa", "15" -> "Chattanooga", "16" -> "St Louis", "17" -> "Orlando", "18" -> "Fayetteville", "19" -> "Austin", "20" -> "Austin", "21" -> "Columbia", "22" -> "Baton Rouge", "23" -> "El Paso", "24" -> "Jackson", "25" -> "San Antonio", "26" -> "Jackson", "27" -> "Montgomery", "28" -> "Waco", "29" -> "Houston", "30" -> "Waco", "31" -> "Charleston", "32" -> "Montgomery", "33" -> "Mobile", "34" -> "Biloxi", "35" -> "Houston", "36" -> "Louisville", "37" -> "Houston", "38" -> "Birmingham", "39" -> "Nashville", "40" -> "Starkville", "41" -> "Chattanooga", "42" -> "Starkville", "43" -> "Little Rock ", "44" -> "Fayetteville", "45" -> "Macon", "46" -> "Huntsville", "47" -> "Mobile", "48" -> "Tampa", "49" -> "Lexington", "50" -> "Starkville", "51" -> "Auburn", "52" -> "Shreveport", "53" -> "Birmingham", "54" -> "Houston", "55" -> "Huntsville", "56" -> "Savannah", "57" -> "Macon", "58" -> "Shreveport", "59" -> "Montgomery", "60" -> "Birmingham", "61" -> "Dallas", "62" -> "Atlanta", "63" -> "Nashville", "64" -> "Louisville", "65" -> "Savannah ", "66" -> "Athens", "67" -> "San Antonio", "68" -> "Chattanooga", "69" -> "Huntsville", "70" -> "Little Rock ", "71" -> "Jefferson City ", "72" -> "Mobile", "73" -> "Miami", "74" -> "Nashville", "75" -> "New Orleans", "76" -> "Oxford", "77" -> "Athens", "78" -> "Jefferson City ", "79" -> "Gainesville", "80" -> "El Paso", "81" -> "Tampa", "82" -> "Nashville", "83" -> "Birmingham", "84" -> "Columbia", "85" -> "San Antonio", "86" -> "St Louis", "87" -> "Macon", "88" -> "Athens", "89" -> "Auburn", "90" -> "Memphis", "91" -> "Austin", "92" -> "Auburn", "93" -> "Mobile ", "94" -> "Oxford ", "95" -> "Waco", "96" -> "Huntsville", "97" -> "St Louis", "98" -> "Jacksonville", "99" -> "Auburn ", "100" -> "Lexington", "101" -> "El Paso", "102" -> "Atlanta", "103" -> "Springfield", "104" -> "Knoxville", "105" -> "Little Rock ", "106" -> "College Station", "107" -> "Jacksonville", "108" -> "Columbia", "109" -> "Charleston", "110" -> "Fayetteville", "111" -> "Tallahassee", "112" -> "College Station", "113" -> "El Paso", "114" -> "Hattiesburg", "115" -> "Louisville ", "116" -> "Springfield", "117" -> "Biloxi", "118" -> "Oxford", "119" -> "New Orleans"}
+
+>>states_a = {"0" -> "AL", "1" -> "GA", "2" -> "TN", "3" -> "FL", "4" -> "AL", "5" -> "KY", "6" -> "MO", "7" -> "FL", "8" -> "GA", "9" -> "SC", "10" -> "TN", "11" -> "TN", "12" -> "GA", "13" -> "TN", "14" -> "TN", "15" -> "MS", "16" -> "AL", "17" -> "GA", "18" -> "TX", "19" -> "TX", "20" -> "MS", "21" -> "MO", "22" -> "MS", "23" -> "TN", "24" -> "FL", "25" -> "GA", "26" -> "FL", "27" -> "MO", "28" -> "MS", "29" -> "TX", "30" -> "MO", "31" -> "MS", "32" -> "GA", "33" -> "GA", "34" -> "KY", "35" -> "SC", "36" -> "MS", "37" -> "FL", "38" -> "TX", "39" -> "FL", "40" -> "TX", "41" -> "TN", "42" -> "AL", "43" -> "TX", "44" -> "GA", "45" -> "TX", "46" -> "AR", "47" -> "FL", "48" -> "GA", "49" -> "LA", "50" -> "MS", "51" -> "AL", "52" -> "MS", "53" -> "LA", "54" -> "MO", "55" -> "MO", "56" -> "GA", "57" -> "MO", "58" -> "AL", "59" -> "FL", "60" -> "TN", "61" -> "FL", "62" -> "TX", "63" -> "MO", "64" -> "KY", "65" -> "GA", "66" -> "TX", "67" -> "MO", "68" -> " AR", "69" -> "AL", "70" -> "FL", "71" -> "AL", "72" -> "TX", "73" -> "GA", "74" -> "TN", "75" -> "LA", "76" -> "AR", "77" -> "GA", "78" -> "MO", "79" -> "TX", "80" -> "TN", "81" -> "FL", "82" -> "GA", "83" -> "FL", "84" -> "AL", "85" -> "KY", "86" -> "MO", "87" -> "MO", "88" -> "FL", "89" -> "FL", "90" -> "FL", "91" -> "MO", "92" -> "MS", "93" -> "FL", "94" -> "FL", "95" -> "GA", "96" -> "MO", "97" -> "TX", "98" -> "FL", "99" -> "SC", "100" -> "GA", "101" -> "TN", "102" -> "MO", "103" -> "TN", "104" -> "AL", "105" -> "MS", "106" -> "TX", "107" -> "LA", "108" -> "LA", "109" -> "AL", "110" -> "AR", "111" -> "TX", "112" -> "AL", "113" -> "MS", "114" -> "MO", "115" -> "TX", "116" -> "TX", "117" -> "MO", "118" -> "TX", "119" -> "SC"}
+
+>>states_b = {"0" -> "GA", "1" -> "AL", "2" -> "LA", "3" -> "FL", "4" -> "GA", "5" -> "FL", "6" -> "SC", "7" -> "GA", "8" -> "FL", "9" -> "TX", "10" -> "LA", "11" -> "LA", "12" -> "LA", "13" -> "FL", "14" -> "AL", "15" -> "TN", "16" -> "MO", "17" -> "FL", "18" -> "AR", "19" -> "TX", "20" -> "TX", "21" -> "SC", "22" -> "LA", "23" -> "TX", "24" -> "MS", "25" -> "TX", "26" -> "MS", "27" -> " AL", "28" -> "TX", "29" -> "TX", "30" -> "TX", "31" -> "SC", "32" -> "AL", "33" -> "AL", "34" -> "MS", "35" -> "TX", "36" -> "KY", "37" -> "TX", "38" -> "AL", "39" -> "TN", "40" -> "MS", "41" -> "TN", "42" -> "MS", "43" -> "AR", "44" -> "AR", "45" -> "GA", "46" -> "AL", "47" -> "AL", "48" -> "FL", "49" -> "KY", "50" -> "MS", "51" -> "AL", "52" -> "LA", "53" -> "AL", "54" -> "TX", "55" -> "AL", "56" -> "GA", "57" -> "GA", "58" -> "LA", "59" -> "AL", "60" -> "AL", "61" -> "TX", "62" -> "GA", "63" -> "TN", "64" -> "KY", "65" -> "GA", "66" -> "GA", "67" -> "TX", "68" -> "TN", "69" -> "AL", "70" -> "AR", "71" -> "MO", "72" -> "AL", "73" -> "FL", "74" -> "TN", "75" -> "LA", "76" -> "MS", "77" -> "GA", "78" -> "MO", "79" -> "FL", "80" -> "TX", "81" -> "FL", "82" -> "TN", "83" -> "AL", "84" -> "MO", "85" -> "TX", "86" -> "MO", "87" -> "GA", "88" -> "GA", "89" -> "AL", "90" -> "TN", "91" -> "TX", "92" -> "AL", "93" -> "AL", "94" -> "MS", "95" -> "TX", "96" -> "AL", "97" -> "MO", "98" -> "FL", "99" -> "AL", "100" -> "KY", "101" -> "TX", "102" -> "GA", "103" -> "MO", "104" -> "TN", "105" -> "AR", "106" -> "TX", "107" -> "FL", "108" -> "SC ", "109" -> "SC", "110" -> "AR", "111" -> "FL", "112" -> "TX", "113" -> "TX", "114" -> "MS", "115" -> "KY", "116" -> "MO", "117" -> "MS", "118" -> "MS", "119" -> "NO"}
+
+>>populations_a = {"0" -> "158,991", "1" -> "5,949,951", "2" -> "1,384,260", "3" -> "6,158,824", "4" -> "235,628", "5" -> "516,697", "6" -> "149,807", "7" -> "2,387,138", "8" -> "600,151", "9" -> "832,666", "10" -> "1,384,260", "11" -> "868,546", "12" -> "600,151", "13" -> "868,546", "14" -> "1,384,260", "15" -> "379,582", "16" -> "455,458", "17" -> "228,914", "18" -> "273,101", "19" -> "7,233,323", "20" -> "148,839", "21" -> "178,271", "22" -> "148,839", "23" -> "1,930,961", "24" -> "385,145", "25" -> "303,811", "26" -> "6,158,824", "27" -> "2,807,338", "28" -> "52,744", "29" -> "7,233,323", "30" -> "2,143,651", "31" -> "576,382", "32" -> "303,811", "33" -> "389,484", "34" -> "1,297,310", "35" -> "787,643", "36" -> "148,839", "37" -> "6,158,824", "38" -> "2,518,036", "39" -> "1,504,980", "40" -> "7,233,323", "41" -> "868,546", "42" -> "235,628", "43" -> "2,168,316", "44" -> "209,271", "45" -> "7,233,323", "46" -> "738,344", "47" -> "385,145", "48" -> "5,949,951", "49" -> "830,480", "50" -> "52,744", "51" -> "235,628", "52" -> "379,582", "53" -> "1,262,888", "54" -> "462,369", "55" -> "149,807", "56" -> "303,811", "57" -> "178,271", "58" -> "414,079", "59" -> "1,504,980", "60" -> "1,384,260", "61" -> "6,158,824", "62" -> "6,997,384", "63" -> "2,143,651", "64" -> "516,697", "65" -> "600,151", "66" -> "273,101", "67" -> "2,807,338", "68" -> "549,128", "69" -> "373,903", "70" -> "288,212", "71" -> "158,991", "72" -> "6,997,384", "73" -> "5,949,951", "74" -> "868,546", "75" -> "443,708", "76" -> "549,128", "77" -> "228,914", "78" -> "178,271", "79" -> "273,101", "80" -> "547,776", "81" -> "2,387,138", "82" -> "5,949,951", "83" -> "1,504,980", "84" -> "158,991", "85" -> "1,297,310", "86" -> "2,143,651", "87" -> "149,807", "88" -> "288,212", "89" -> "3,068,511", "90" -> "1,504,980", "91" -> "2,143,651", "92" -> "49,392", "93" -> "6,158,824", "94" -> "2,387,138", "95" -> "303,811", "96" -> "462,369", "97" -> "271,942", "98" -> "288,212", "99" -> "832,666", "100" -> "600,151", "101" -> "868,546", "102" -> "178,271", "103" -> "1,930,961", "104" -> "235,628", "105" -> "576,382", "106" -> "2,168,316", "107" -> "1,262,888", "108" -> "830,480", "109" -> "373,903", "110" -> "738,344", "111" -> "845,553", "112" -> "1,151,801", "113" -> "148,839", "114" -> "2,143,651", "115" -> "271,942", "116" -> "2,518,036", "117" -> "2,807,338", "118" -> "845,553", "119" -> "787,643"} 
+
+>>populations_b = {"0" -> "209,271", "1" -> "1,151,801", "2" -> "830,480", "3" -> "385,145", "4" -> "209,271", "5" -> "288,212", "6" -> "787,643", "7" -> "389,484", "8" -> "3,068,511", "9" -> "7,233,323", "10" -> "1,262,888", "11" -> "1,262,888", "12" -> "443,708", "13" -> "6,158,824", "14" -> "235,628", "15" -> "547,776", "16" -> "2,807,338", "17" -> "2,387,138", "18" -> "549,128", "19" -> "2,168,316", "20" -> "2,168,316", "21" -> "832,666", "22" -> "830,480", "23" -> "845,553", "24" -> "576,382", "25" -> "2,518,036", "26" -> "576,382", "27" -> "373,903", "28" -> "271,942", "29" -> "6,997,384", "30" -> "271,942", "31" -> "787,643", "32" -> "373,903", "33" -> "414,079", "34" -> "379,582", "35" -> "6,997,384", "36" -> "1,297,310", "37" -> "6,997,384", "38" -> "1,151,801", "39" -> "1,930,961", "40" -> "49,392", "41" -> "547,776", "42" -> "49,392", "43" -> "738,344", "44" -> "549,128", "45" -> "228,914", "46" -> "455,458", "47" -> "414,079", "48" -> "3,068,511", "49" -> "516,697", "50" -> "49,392", "51" -> "158,991", "52" -> "443,708", "53" -> "1,151,801", "54" -> "6,997,384", "55" -> "455,458", "56" -> "389,484", "57" -> "228,914", "58" -> "443,708", "59" -> "373,903", "60" -> "1,151,801", "61" -> "7,233,323", "62" -> "5,949,951", "63" -> "1,930,961", "64" -> "1,297,310", "65" -> "389,484", "66" -> "209,271", "67" -> "2,518,036", "68" -> "547,776", "69" -> "455,458", "70" -> "738,344", "71" -> "149,807", "72" -> "414,079", "73" -> "6,158,824", "74" -> "1,930,961", "75" -> "1,262,888", "76" -> "52,744", "77" -> "209,271", "78" -> "149,807", "79" -> "288,212", "80" -> "845,553", "81" -> "3,068,511", "82" -> "1,930,961", "83" -> "1,151,801", "84" -> "178,271", "85" -> "2,518,036", "86" -> "2,807,338", "87" -> "228,914", "88" -> "209,271", "89" -> "158,991", "90" -> "1,384,260", "91" -> "2,168,316", "92" -> "158,991", "93" -> "414,079", "94" -> "52,744", "95" -> "271,942", "96" -> "455,458", "97" -> "2,807,338", "98" -> "1,504,980", "99" -> "158,991", "100" -> "516,697", "101" -> "845,553", "102" -> "5,949,951", "103" -> "462,369", "104" -> "868,546", "105" -> "738,344", "106" -> "273,101", "107" -> "1,504,980", "108" -> "832,666", "109" -> "787,643", "110" -> "549,128", "111" -> "385,145", "112" -> "273,101", "113" -> "845,553", "114" -> "148,839", "115" -> "1,297,310", "116" -> "462,369", "117" -> "379,582", "118" -> "52,744", "119" -> "1,262,888"}
+
+>>outcome = {"0" -> "1", "1" -> "0", "2" -> "0", "3" -> "0", "4" -> "0", "5" -> "0", "6" -> "1", "7" -> "0", "8" -> "1", "9" -> "1", "10" -> "0", "11" -> "1", "12" -> "0", "13" -> "1", "14" -> "0", "15" -> "1", "16" -> "1", "17" -> "1", "18" -> "1", "19" -> "0", "20" -> "1", "21" -> "1", "22" -> "1", "23" -> "0", "24" -> "1", "25" -> "1", "26" -> "0", "27" -> "0", "28" -> "1", "29" -> "0", "30" -> "0", "31" -> "1", "32" -> "1", "33" -> "1", "34" -> "0", "35" -> "1", "36" -> "1", "37" -> "1", "38" -> "0", "39" -> "1", "40" -> "0", "41" -> "0", "42" -> "0", "43" -> "0", "44" -> "1", "45" -> "0", "46" -> "0", "47" -> "1", "48" -> "0", "49" -> "0", "50" -> "0", "51" -> "0", "52" -> "1", "53" -> "0", "54" -> "1", "55" -> "1", "56" -> "1", "57" -> "1", "58" -> "1", "59" -> "0", "60" -> "0", "61" -> "1", "62" -> "0", "63" -> "0", "64" -> "1", "65" -> "0", "66" -> "0", "67" -> "0", "68" -> "0", "69" -> "1", "70" -> "1", "71" -> "0", "72" -> "0", "73" -> "1", "74" -> "1", "75" -> "1", "76" -> "0", "77" -> "0", "78" -> "0", "79" -> "1", "80" -> "1", "81" -> "1", "82" -> "0", "83" -> "0", "84" -> "1", "85" -> "1", "86" -> "1", "87" -> "1", "88" -> "0", "89" -> "0", "90" -> "0", "91" -> "1", "92" -> "1", "93" -> "0", "94" -> "0", "95" -> "0", "96" -> "0", "97" -> "1", "98" -> "1", "99" -> "0", "100" -> "0", "101" -> "0", "102" -> "1", "103" -> "0", "104" -> "1", "105" -> "1", "106" -> "0", "107" -> "1", "108" -> "1", "109" -> "1", "110" -> "0", "111" -> "0", "112" -> "0", "113" -> "1", "114" -> "0", "115" -> "1", "116" -> "0", "117" -> "0", "118" -> "0", "119" -> "1"}
+
+
+
+*page
+	*header: AU Calibration Training Study Instructions
+	
+	You have been assigned to the treatment group A. This means that you will complete 120 calibration training questions. Each question has a maximum time of 30 seconds, but most questions should not take the entire time. The training should take between 30 and 40 minutes in total. The instructions for the calibration training questions can be found on the following page.
+	
+	Before you begin the calibration questions you will be asked to answer three simple priming questions. Then you will begin the calibration training. When you've finished, you will be asked to complete one final page of basic information questions. This will complete your preliminary requirements. Beginning next weekend you will receive a weekly email to enter your football forecasts. Thank you for your participation!	
+
+	If you have any questions please email rossgritz@hotmail.com.
+
+
+
+*page
+	*header: Calibration Training Instructions
+	--TODO: Add link to videos
+	
+	A statement about the population of two cities will be made. You will be asked to determine whether that statement is true or false and to give a subjective probability of how much confidence you have in your answer. If you do not know, you should answer with 50%. If you are absolutely certain, select 99%. If otherwise, select something inbetween.
+	
+	Your performance on this calibration will be scored using a forecasting scoring metric. This metric was developed specifically for the purpose of improving performance on web-based training apps like the one you will be using. You will receive positive points for a correct answer and negative points for an incorrect answer. The amount of points your receive for your answers is designed to reduce overconfidence and to lead you to make well calibrated forecasts. 
+	
+	Your score in the calibration training will not affect your ranking in the football forecasting tournament. However, previous studies lead us to believe that those that improve their scores in the calibration training will also have high scores in the football forecasting tournament. The same scoring metric will be used to evaluate performance in the forecasting tournament. If you find it difficult and are unable to maintain a positive number, please don't get discouraged, please continue and try to improve - that's the purpose of the training and one thing we're trying to test. Also remember to apply what you learn in this training during the forecasting tournament this semester!
+
+
+
+*page
+	*header: Please answer the following three quick priming questions:
+	
+	*question: 1.	A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? 
+		*countdown: 180.seconds
+	
+	*question: 2.	If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?
+	
+	*question: 3.	In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake?
+
+
+
+>>ct = 0
+
+
+
+*while: ct < 120
+	*page
+		*header: Calibration Training {ct+1}/120
+		*question: {cities_a[ct]}, {states_a[ct]} has a larger metro population than {cities_b[ct]}, {states_b[ct]}?
+			True
+			False
+			*countdown: 30.seconds
+			*save: tf
+			
+		*question: What is the probability that your answer is correct?
+			50%
+			55%
+			60%
+			65%
+			70%
+			75%
+			80%
+			85%
+			90%
+			95%
+			97%
+			99%
+			*save: pp
+			
+	*if: tf.size = 0 or pp.size = 0
+		*goto: compute_points
+	*if: tf = "True" and outcome[ct] = 1 
+		>>xx = prob_table2[pp]
+		*header: Sorry, you were incorrect.
+	*if: tf = "True" and outcome[ct] = 0
+		>>xx = prob_table[pp]
+		*header: You are correct!
+	*if: tf = "False"  and outcome[ct] = 1
+		>>xx = prob_table[pp]
+		*header: You are correct!
+	*if: tf = "False" and outcome[ct] = 0
+		>>xx = prob_table2[pp]
+		*header: Sorry, you were incorrect.
+
+		
+	*header: {cities_a[ct]}, {states_a[ct]} has a metro population of {populations_a[ct]} while {cities_b[ct]}, {states_b[ct]} has a metro population of {populations_b[ct]}.
+	-->>log = 33.711*(log_table2[xx]+0.301)
+	>>x = log_table2[xx]
+	--*header: This is x {x}.
+	>>log = (10/(-0.00436+0.301))*(x+0.301)
+	*label: compute_points
+	*if: tf.size = 0 or pp.size = 0
+		>>log = 0
+		*header: You ran out of time, sorry.
+	>>points = points + log
+	*header: Your score for the question is: {log}
+	*header: Your total score is: {points}
+	>>ct = ct + 1
+
+
+
+*page
+	*header: Calibration training complete!
+	--*progress: 98%
+	
+	You have compelted the calibration training portion of the study. Please proceed to answer one page of basic information questions and three brief practice questions in order to be ready to begin forecasting!
+	
+	
+
+*page
+	*header: Please answer the following basic information questions:
+	
+	*question: What is your gender?
+		Female
+		Male
+		Other
+		
+	*question: What is your major?
+	
+	*question: What is your class standing?
+		Freshman
+		Sophomore
+		Junior
+		Senior
+		
+	*question: Please select if you:
+		*type: checkbox
+		Have ever participated in fantasy sports?
+		Are currently participating in fantasy sports?
+		Betted on sporting events?
+		Currently bet on sporting events?
+
+	*question: How many AU games did you attend last year?
+		*type: number
+	
+	*question: How many SEC games do you watch (at least five minutes of) on average each week?
+		*type: number
+
+	*question: How many out of conference games do you watch (at least five minutes of) on average each week?
+		*type: number
+	
+	*question: How many NFL games do you watch (at least five minutes of) on average each week?
+		*type: number
+	
+	*question: How often do you watch sports news?
+		Never
+		Once or twice a month
+		Once a week
+		2-3 times a week
+		Most days
+		
+	*question: How well would you rate your expertise related to college football?
+		1
+		2
+		3
+		4
+		5
+		6
+		7
+		8
+		9
+		10
+
+	*question: Please enter your email address to use to mail you the weekly forecasts:
+	
+	If you have any questions please email rossgritz@hotmail.com.
+	
+*header: You have now completed the calibration training portion of this study. Please stay tuned for an email to begin your forecasts!
